@@ -67,6 +67,22 @@ public class MyLinkedlistTest {
 						myLinkedlist.tail.equals(mythirdnode);
 		Assert.assertTrue(result);
 	}
+	@Test
+	public void removinglastelementinlinkedlistshouldpass() {
+		MyNode<Integer> myfirstnode = new MyNode<>(56);
+		MyNode<Integer> mysecondnode = new MyNode<>(30);
+		MyNode<Integer> mythirdnode = new MyNode<>(70);
+		MyLinkedlist myLinkedlist = new  MyLinkedlist();
+		myLinkedlist.add(myfirstnode);
+		myLinkedlist.append(mysecondnode);
+		myLinkedlist.append(mythirdnode);
+		myLinkedlist.poplast();
+		
+		boolean result = myLinkedlist.head.equals(myfirstnode) && 
+						myLinkedlist.head.getNext().equals(mysecondnode) &&
+						myLinkedlist.tail.equals(mysecondnode);
+		Assert.assertTrue(result);
+	}
 	
 	
 	

@@ -52,4 +52,16 @@ public class MyLinkedlist {
 		this.head=head.getNext();
 	}
 
+	public INode poplast() {
+		INode tempnode=head;
+		while(!tempnode.getNext().equals(tail)) {
+			tempnode=tempnode.getNext();
+		}
+		this.tail=tempnode;
+		tempnode=tempnode.getNext();
+		return tempnode;
+		
+		
+	}
+
 }
