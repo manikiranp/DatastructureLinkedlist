@@ -51,7 +51,7 @@ public class MyLinkedlist {
 		INode tempnode =this.head;
 		this.head=head.getNext();
 	}
-
+	
 	public INode poplast() {
 		INode tempnode=head;
 		while(!tempnode.getNext().equals(tail)) {
