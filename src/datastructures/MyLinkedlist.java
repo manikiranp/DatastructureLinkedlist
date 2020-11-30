@@ -21,7 +21,18 @@ public class MyLinkedlist {
 			this.head.setNext(tempnode);
 		}
 	}
-	
-	
+
+	public void append(INode mynode) {
+		if(this.head==null) {
+			this.head=mynode;
+		}
+		if(this.tail==null) {
+			this.tail=mynode;
+		} else {
+			this.tail.setNext(mynode);
+			this.tail=mynode;
+		}
+			
+	}
 
 }
