@@ -35,4 +35,11 @@ public class MyLinkedlist {
 			
 	}
 
+	public void insert(INode mynode, INode newnode) {
+		INode tempnode=mynode.getNext();
+		mynode.setNext(newnode);
+		newnode.setNext(tempnode);
+		
+	}
+
 }
